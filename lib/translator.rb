@@ -7,7 +7,6 @@ def load_library(path)
     final_hash[key] = {}
     final_hash[key][:english] = value[0]
     final_hash[key][:japanese] = value[1]
-   # binding.pry
   end
     final_hash
 end
@@ -17,8 +16,6 @@ def get_japanese_emoticon(path, emoticon)
     if value[:english] == emoticon
       return value[:japanese]
     end
-    
-    #binding.pry
   end
   return "Sorry, that emoticon was not found"
 end
@@ -28,8 +25,6 @@ def get_english_meaning(path, emoticon)
     if value[:japanese] == emoticon 
       return key
     end
-  #binding.pry
   end
   return "Sorry, that emoticon was not found"
-
 end
